@@ -26,6 +26,7 @@ char	*ft_read(int fd, char *str)
 		count = read(fd, array, BUFFER_SIZE);
 		if (count == -1)
 		{
+			free(str);
 			free(array);
 			return (NULL);
 		}
